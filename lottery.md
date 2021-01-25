@@ -13,19 +13,20 @@
 从总的员工列表中踢出中奖人员
 
 
-import random
-yg = []
-for i in range(1,301):
-    yg.append(f'员工{i}')
-zj=[30,6,3]
-count=0
-while count<3:
-    choice=input(f'正在进行{3-count}等奖的抽取')
-    winner=random.sample(yg,zj[count])
-    print(winner)
-    
+    import random
+    yg=[]
+    for i in range(1,301):
+        yg.append(f'员工{i}')
+    zj_p=[30,6,3]
+    count=0
+    while count<3:
+        choice=input(f'正在进行{3-count}等奖的抽取，按下任意键继续')
+        winner=random.sample(yg,zj_p[count])
+        print(winner)
+
     for p in winner:
         yg.remove(p)
 
     count+=1
-print(yg)
+    print(yg)
+
